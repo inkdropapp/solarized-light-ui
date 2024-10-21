@@ -71,6 +71,7 @@
   --hsl-bg-muted-highlight: var(--hsl-base2);
   --hsl-bg-highlight: var(--hsl-base4);
   --hsl-fg: var(--hsl-base01);
+  --hsl-separator: var(--hsl-base3);
 
   --color-base05: hsl(var(--hsl-base05));
   --color-base04: hsl(var(--hsl-base04));
