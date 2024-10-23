@@ -99,10 +99,15 @@
   --preferences-view-background: hsl(var(--hsl-bg));
 }
 
-body.acrylic-window {
+:root:has(body.acrylic-window) {
+  --page-background: transparent;
   --editor-background: hsl(44deg 100% 94% / 70%);
   --editor-drawer-background: hsl(var(--hsl-base3));
   --note-list-bar-background: hsl(var(--hsl-bg-muted-highlight) / 70%);
   --sidebar-background: hsl(44deg 100% 94% / 70%);
   --inline-dropdown-menu-background: hsl(var(--hsl-bg));
+}
+
+:root:has(body.acrylic-window.platform-win32) {
+  --page-background: rgb(255 255 255 / 40%);
 }
