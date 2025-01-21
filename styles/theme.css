@@ -94,7 +94,7 @@
   --editor-background: hsl(var(--hsl-bg));
   --editor-floating-actions-background: hsl(var(--hsl-base2) / 60%);
   --editor-drawer-background: hsl(var(--hsl-base3) / 70%);
-  --notification-item-background: hsl(var(--hsl-base05) / 80%);
+  --notification-item-background: hsl(var(--hsl-base3) / 80%);
   --preferences-sidebar-background: hsl(var(--hsl-bg-muted-highlight));
   --preferences-sidebar-item-active-background: hsl(var(--hsl-blue-500) / 30%);
   --preferences-view-background: hsl(var(--hsl-bg));
