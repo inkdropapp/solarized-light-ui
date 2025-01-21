@@ -113,3 +113,26 @@
 :root:has(body.acrylic-window.platform-win32) {
   --page-background: rgb(255 255 255 / 40%);
 }
+
+.mde-preview {
+  --color-accent-fg: var(--color-cyan-500);
+
+  strong {}
+
+  em {
+    color: var(--color-base03);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-base03);
+  }
+
+  a {
+    --color-accent-fg: var(--color-cyan-500);
+  }
+}
