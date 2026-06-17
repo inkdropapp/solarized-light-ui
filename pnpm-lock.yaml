@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@inkdropapp/theme-dev-helpers':
-        specifier: ^0.3.9
-        version: 0.3.9(@types/node@25.9.3)
+        specifier: ^0.3.11
+        version: 0.3.11
 
 packages:
 
@@ -26,11 +26,11 @@ packages:
   '@inkdropapp/base-ui-theme@0.7.5':
     resolution: {integrity: sha512-HaUJhxSv1G2WSAPTaDqVjU0f5Uk9zClFGc4N0oILLWRdlwFuM9hfrsFT4Vn4IVhHnPzoeqZrNj3gLF0Yx0VqFA==}
 
-  '@inkdropapp/css@0.6.7':
-    resolution: {integrity: sha512-U0XMHnrQ4u7whjHbGT1x4NBcbsm1Q07DNRK5SrCn4RJtPOQouOAnw6ilLXBlz2pnlTA3+hM4sX8iG8gL8wd8uw==}
+  '@inkdropapp/css@0.6.8':
+    resolution: {integrity: sha512-vkwBhYeb3e87ydZEjoK4hCk2tzjJzM89Iz8U5e2sOadOnb7YkYQitm99iDLTufFNVaMZN3ZSSM5H4rz28NtFQg==}
 
-  '@inkdropapp/theme-dev-helpers@0.3.9':
-    resolution: {integrity: sha512-BoaEveh8DbGDvnDAFRDI+just4zoxT5kcrrK/FvqKqyl89aFbYyFdWtP4GZn1xPvTqFjyt7P4oOtSDkUrkt94w==}
+  '@inkdropapp/theme-dev-helpers@0.3.11':
+    resolution: {integrity: sha512-BhJKJRLIe73OsZoAy2eMlYfl1/QJ/pphWoM9zT4qdsW1MZAadMAjJ6h5FpIQp0ccljZYiuYOXkkhWCxIEkgAww==}
     hasBin: true
 
   '@napi-rs/wasm-runtime@1.1.5':
@@ -152,9 +152,6 @@ packages:
 
   '@tybys/wasm-util@0.10.2':
     resolution: {integrity: sha512-RoBvJ2X0wuKlWFIjrwffGw1IqZHKQqzIchKaadZZfnNpsAYp2mM0h36JtPCjNDAHGgYez/15uMBpfGwchhiMgg==}
-
-  '@types/node@25.9.3':
-    resolution: {integrity: sha512-603BddQMv3pUcr4U2dhujk83N2tTDVr/34wII2B6bJy6g+8WD6yUb11jszNs0gdi4PesVWl7ABt8nYMVpnLUcg==}
 
   '@vitejs/plugin-react@6.0.2':
     resolution: {integrity: sha512-DlSMqo4WhThw4vB8Mpn0Woe9J+Jfq1geJ61AKW0QEgLzGMNwtIMdxbDUzLxcun8W7NbJO0e2Jg/Nxm3cCSVzzg==}
@@ -419,9 +416,6 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  undici-types@7.24.6:
-    resolution: {integrity: sha512-WRNW+sJgj5OBN4/0JpHFqtqzhpbnV0GuB+OozA9gCL7a993SmU+1JBZCzLNxYsbMfIeDL+lTsphD5jN5N+n0zg==}
-
   vite@8.0.16:
     resolution: {integrity: sha512-h9bXPmJichP5fLmVQo3PyaGSDE2n3aPuomeAlVRm0JLmt4rY6zmPKd59HYI4LNW8oTK7tlTsuC7l/m7awx9Jcw==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -519,22 +513,22 @@ snapshots:
 
   '@inkdropapp/base-ui-theme@0.7.5': {}
 
-  '@inkdropapp/css@0.6.7':
+  '@inkdropapp/css@0.6.8':
     optionalDependencies:
       inkdrop-model: 2.11.5
 
-  '@inkdropapp/theme-dev-helpers@0.3.9(@types/node@25.9.3)':
+  '@inkdropapp/theme-dev-helpers@0.3.11':
     dependencies:
       '@inkdropapp/base-ui-theme': 0.7.5
-      '@inkdropapp/css': 0.6.7
-      '@vitejs/plugin-react': 6.0.2(vite@8.0.16(@types/node@25.9.3))
+      '@inkdropapp/css': 0.6.8
+      '@vitejs/plugin-react': 6.0.2(vite@8.0.16)
       commander: 15.0.0
       puppeteer: 25.1.0
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
       react-router-dom: 7.17.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       typescript: 6.0.3
-      vite: 8.0.16(@types/node@25.9.3)
+      vite: 8.0.16
     transitivePeerDependencies:
       - '@rolldown/plugin-babel'
       - '@types/node'
@@ -624,15 +618,10 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@types/node@25.9.3':
-    dependencies:
-      undici-types: 7.24.6
-    optional: true
-
-  '@vitejs/plugin-react@6.0.2(vite@8.0.16(@types/node@25.9.3))':
+  '@vitejs/plugin-react@6.0.2(vite@8.0.16)':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 8.0.16(@types/node@25.9.3)
+      vite: 8.0.16
 
   ansi-regex@5.0.1: {}
 
@@ -849,10 +838,7 @@ snapshots:
 
   typescript@6.0.3: {}
 
-  undici-types@7.24.6:
-    optional: true
-
-  vite@8.0.16(@types/node@25.9.3):
+  vite@8.0.16:
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -860,7 +846,6 @@ snapshots:
       rolldown: 1.0.3
       tinyglobby: 0.2.17
     optionalDependencies:
-      '@types/node': 25.9.3
       fsevents: 2.3.3
 
   webdriver-bidi-protocol@0.4.2: {}

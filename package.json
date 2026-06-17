@@ -9,7 +9,9 @@
     "tokens.css",
     "theme.css"
   ],
-  "scripts": {},
+  "scripts": {
+    "prepublishOnly": "./node_modules/.bin/generate-palette"
+  },
   "keywords": [
     "inkdrop",
     "markdown"
@@ -18,7 +20,7 @@
   "author": "Takuya Matsuyama<t@inkdrop.app>",
   "license": "MIT",
   "devDependencies": {
-    "@inkdropapp/theme-dev-helpers": "^0.3.9"
+    "@inkdropapp/theme-dev-helpers": "^0.3.11"
   },
   "engines": {
     "inkdrop": "^6.0.0"
