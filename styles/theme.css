@@ -29,18 +29,18 @@
   --page-background: var(--color-neutral-50);
 
   /*--- Lightest surfaces (Solarized base3) ---*/
-  --input-background: var(--color-neutral-50);
+  --input-background: var(--color-neutral-100);
   --menu-background: var(--color-neutral-50);
   --dropdown-menu-background: var(--color-neutral-50);
   --inline-dropdown-menu-background: hsl(var(--hsl-neutral-50) / 70%);
   --vertical-menu-background: hsl(var(--hsl-neutral-50) / 70%);
   --form-select-background: var(--color-neutral-50);
-  --popup-background: var(--color-neutral-50);
+  --popup-background: var(--color-neutral-100);
   --notification-item-background: hsl(var(--hsl-neutral-50) / 80%);
 
   /*--- Buttons (base defaults reach for non-Solarized gray / opaque white) ---*/
   --button-background: hsl(var(--hsl-neutral-100)) none;
-  --button-hover-background-color: hsl(var(--hsl-neutral-200) / 50%);
+  --button-hover-background-color: hsl(var(--hsl-neutral-200) / 30%);
   --basic-button-hover-background: hsl(var(--hsl-neutral-50) / 50%);
 
   /*--- Keyboard key (base default light uses non-Solarized --off-white) ---*/
@@ -48,25 +48,25 @@
   --kbd-border-color: var(--color-neutral-200);
 
   /*--- Side bar ---*/
-  --sidebar-color-scheme: light;
-  --sidebar-background: var(--color-neutral-300);
-  --sidebar-border-right: 1px solid hsl(var(--hsl-neutral-200));
+  --sidebar-background: var(--color-neutral-100);
+  --sidebar-border-right: 0px solid hsl(var(--hsl-neutral-100));
   --sidebar-menu-item-color: var(--text-color);
-  --sidebar-sync-status-view-background: hsl(var(--hsl-neutral-200) / 30%);
-  --sidebar-sync-status-view-border-top: 1px solid hsl(var(--hsl-neutral-300));
+  --sidebar-sync-status-view-background: hsl(var(--hsl-neutral-100));
+  --sidebar-sync-status-view-border-top: 1px solid
+    hsl(var(--hsl-neutral-200) / 50%);
 
   /*--- Note list bar (Solarized base1) ---*/
-  --note-list-bar-background: var(--color-neutral-200);
-  --note-list-bar-border-right: 1px solid hsl(var(--hsl-neutral-300));
+  --note-list-bar-background: var(--color-neutral-50);
+  --note-list-bar-border-right: 1px solid hsl(var(--hsl-neutral-100));
   --note-search-bar-input-background: var(--color-neutral-100);
   --note-list-view-item-header-color: var(--text-color);
-  --note-list-view-item-separator-border: 1px solid hsl(var(--hsl-neutral-300));
+  --note-list-view-item-separator-border: 1px solid hsl(var(--hsl-neutral-100));
   --note-list-view-item-date-color: hsl(var(--hsl-violet-500));
   --note-list-view-item-selected-background: hsl(var(--hsl-blue-500) / 20%);
   --note-list-view-item-active-background: hsl(var(--hsl-blue-500) / 40%);
 
   /*--- Editor (Solarized base2 — a step lighter than the chrome) ---*/
-  --editor-background: var(--color-neutral-100);
+  --editor-background: var(--color-neutral-50);
   --editor-floating-actions-background: hsl(var(--hsl-neutral-100) / 70%);
   --editor-drawer-background: hsl(var(--hsl-neutral-200) / 70%);
 
@@ -80,14 +80,18 @@
   /*--- Table — header tint (base default uses non-Solarized --hsl-gray-200) ---*/
   --table-header-background: hsl(var(--hsl-neutral-300) / 30%);
 
+  /*--- Tabular menu — active tab merges into the content surface
+        (base default light uses opaque white) ---*/
+  --tabular-menu-active-background: none hsl(var(--hsl-neutral-100));
+
   /*--- Modal ---*/
-  --modal-box-header-background: var(--color-neutral-200);
-  --modal-box-content-background: var(--color-neutral-100);
+  --modal-box-header-background: var(--color-neutral-100);
+  --modal-box-content-background: var(--color-neutral-50);
   --modal-box-actions-background: var(--color-neutral-100);
 
   /*--- Preferences ---*/
-  --preferences-sidebar-background: var(--color-neutral-50);
-  --preferences-view-background: var(--color-neutral-100);
+  --preferences-sidebar-background: var(--color-neutral-100);
+  --preferences-view-background: var(--color-neutral-50);
 
   /*--- Note statuses (app defaults use slate/amber/emerald/rose — not in
         Solarized; remap to the nearest Solarized accent, same step) ---*/
@@ -103,10 +107,10 @@
 
 :root:has(body.acrylic-window) {
   --page-background: transparent;
-  --sidebar-background: hsl(var(--hsl-neutral-100) / 30%);
+  --sidebar-background: hsl(var(--hsl-neutral-200) / 30%);
   --sidebar-sync-status-view-background: hsl(var(--hsl-neutral-100) / 30%);
-  --note-list-bar-background: hsl(var(--hsl-neutral-100) / 70%);
-  --editor-background: hsl(var(--hsl-neutral-100) / 90%);
+  --note-list-bar-background: hsl(var(--hsl-neutral-50) / 70%);
+  --editor-background: hsl(var(--hsl-neutral-50) / 90%);
   --inline-dropdown-menu-background: hsl(var(--hsl-neutral-50));
   --vertical-menu-background: hsl(var(--hsl-neutral-50));
 }
