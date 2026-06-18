@@ -19,7 +19,7 @@
     Page
   --------------------*/
   --page-background: var(--color-neutral-50);
-  --text-color: var(--color-neutral-600);
+  --text-color: var(--color-neutral-500);
 
   /*-------------------
     Links
@@ -29,6 +29,7 @@
   /*-------------------
     Highlighted Text
   --------------------*/
+  --highlight-color: var(--color-neutral-800);
   --highlight-background: var(--color-neutral-300);
 
   /*-------------------
