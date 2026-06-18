@@ -1,53 +1,124 @@
 :root {
-  /*--- Brand ---*/
+  /*-------------------
+    Brand Colors
+  --------------------*/
   --primary-color: hsl(var(--hsl-blue-500) / 90%);
+
+  /*-------------------
+    Form Input
+  --------------------*/
+  --input-background: var(--color-neutral-100);
+
+  /*-------------------
+    Focused Input
+  --------------------*/
+  --focused-form-muted-border-color: var(--color-blue-500);
+  --focused-outline-color: hsl(var(--hsl-blue-500) / 30%);
+
+  /*-------------------
+    Page
+  --------------------*/
+  --page-background: var(--color-neutral-50);
+  --text-color: var(--color-neutral-600);
+
+  /*-------------------
+    Links
+  --------------------*/
   --link-hover-color: var(--color-blue-700);
 
-  /*--- Body text — Solarized fg tone (base01) ---*/
-  --text-color: var(--color-neutral-600);
+  /*-------------------
+    Highlighted Text
+  --------------------*/
+  --highlight-background: var(--color-neutral-300);
+
+  /*-------------------
+    Emotive Colors
+  --------------------*/
+  --info-color: var(--color-blue-500);
+  --warning-color: var(--color-yellow-500);
+
+  /*-------------------
+    Neutral Text
+  --------------------*/
   --unselected-text-color: var(--color-violet-400);
   --selected-text-color: var(--color-blue-900);
-  --header-text-color: var(--color-yellow-500);
 
+  /*-------------------
+    Borders
+  --------------------*/
   --border-color: hsl(var(--hsl-neutral-500) / 15%);
   --strong-border-color: hsl(var(--hsl-neutral-500) / 22%);
   --solid-border-color: var(--color-neutral-300);
 
-  /*--- Diagnostic roles (Solarized: info = blue, warning = yellow) ---*/
-  --info-color: var(--color-blue-500);
-  --warning-color: var(--color-yellow-500);
-
-  /*--- Highlight (base default dark uses non-Solarized --color-sky-600) ---*/
-  --highlight-background: var(--color-neutral-300);
-
-  /*--- Focused Input ---*/
-  --input-focus-border-color: var(--color-blue-500);
-  --focused-form-muted-border-color: var(--color-blue-500);
-  --focused-outline-color: hsl(var(--hsl-blue-500) / 30%);
-
-  /*--- Page — Solarized cream (base3); base light default is pure white ---*/
-  --page-background: var(--color-neutral-50);
-
-  /*--- Lightest surfaces (Solarized base3) ---*/
-  --input-background: var(--color-neutral-100);
-  --menu-background: var(--color-neutral-50);
-  --dropdown-menu-background: var(--color-neutral-50);
-  --inline-dropdown-menu-background: hsl(var(--hsl-neutral-50) / 70%);
-  --vertical-menu-background: hsl(var(--hsl-neutral-50) / 70%);
-  --form-select-background: var(--color-neutral-50);
-  --popup-background: var(--color-neutral-100);
-  --notification-item-background: hsl(var(--hsl-neutral-50) / 80%);
-
-  /*--- Buttons (base defaults reach for non-Solarized gray / opaque white) ---*/
+  /*-------------------
+    Button
+  --------------------*/
   --button-background: hsl(var(--hsl-neutral-100)) none;
   --button-hover-background-color: hsl(var(--hsl-neutral-200) / 30%);
   --basic-button-hover-background: hsl(var(--hsl-neutral-50) / 50%);
 
-  /*--- Keyboard key (base default light uses non-Solarized --off-white) ---*/
+  /*-------------------
+    Elements
+  --------------------*/
   --kbd-background: var(--color-neutral-50);
   --kbd-border-color: var(--color-neutral-200);
 
-  /*--- Side bar ---*/
+  /*-------------------
+    Header
+  --------------------*/
+  --header-text-color: var(--color-yellow-500);
+
+  /*-------------------
+    Input
+  --------------------*/
+  --input-focus-border-color: var(--color-blue-500);
+
+  /*-------------------
+    Segment
+  --------------------*/
+  --segment-background: var(--color-neutral-50);
+  --secondary-segment-background: hsl(var(--hsl-neutral-100) / 50%);
+  --grouped-segment-hover-background: hsl(var(--hsl-neutral-100) / 80%);
+  --piled-segments-background: var(--color-neutral-50);
+
+  /*-------------------
+    Form
+  --------------------*/
+  --form-select-background: var(--color-neutral-50);
+
+  /*-------------------
+    Menu
+  --------------------*/
+  --menu-background: var(--color-neutral-50);
+  --vertical-menu-background: hsl(var(--hsl-neutral-50) / 70%);
+  --tabular-menu-active-background: none hsl(var(--hsl-neutral-100));
+
+  /*-------------------
+    Popup
+  --------------------*/
+  --popup-background: var(--color-neutral-100);
+
+  /*-------------------
+    Table
+  --------------------*/
+  --table-header-background: hsl(var(--hsl-neutral-300) / 30%);
+
+  /*-------------------
+    Dropdown
+  --------------------*/
+  --dropdown-menu-background: var(--color-neutral-50);
+  --inline-dropdown-menu-background: hsl(var(--hsl-neutral-50) / 70%);
+
+  /*-------------------
+    Modal
+  --------------------*/
+  --modal-box-header-background: var(--color-neutral-100);
+  --modal-box-content-background: var(--color-neutral-50);
+  --modal-box-actions-background: var(--color-neutral-100);
+
+  /*-------------------
+    Side Bar
+  --------------------*/
   --sidebar-background: var(--color-neutral-100);
   --sidebar-border-right: 0px solid hsl(var(--hsl-neutral-100));
   --sidebar-menu-item-color: var(--text-color);
@@ -55,55 +126,48 @@
   --sidebar-sync-status-view-border-top: 1px solid
     hsl(var(--hsl-neutral-200) / 50%);
 
-  /*--- Note list bar (Solarized base1) ---*/
+  /*-------------------
+    Note List Bar
+  --------------------*/
   --note-list-bar-background: var(--color-neutral-50);
   --note-list-bar-border-right: 1px solid hsl(var(--hsl-neutral-100));
-  --note-search-bar-input-background: var(--color-neutral-100);
   --note-list-view-item-header-color: var(--text-color);
   --note-list-view-item-separator-border: 1px solid hsl(var(--hsl-neutral-100));
   --note-list-view-item-date-color: hsl(var(--hsl-violet-500));
   --note-list-view-item-selected-background: hsl(var(--hsl-blue-500) / 20%);
   --note-list-view-item-active-background: hsl(var(--hsl-blue-500) / 40%);
+  --note-search-bar-input-background: var(--color-neutral-100);
 
-  /*--- Editor (Solarized base2 — a step lighter than the chrome) ---*/
+  /*-------------------
+    Editor
+  --------------------*/
   --editor-background: var(--color-neutral-50);
   --editor-floating-actions-background: hsl(var(--hsl-neutral-100) / 70%);
   --editor-drawer-background: hsl(var(--hsl-neutral-200) / 70%);
 
-  /*--- Segments — a step lighter than the editor so cards lift off it
-        (base default is var(--white), which reads cold on Solarized cream) ---*/
-  --segment-background: var(--color-neutral-50);
-  --secondary-segment-background: hsl(var(--hsl-neutral-100) / 50%);
-  --grouped-segment-hover-background: hsl(var(--hsl-neutral-100) / 80%);
-  --piled-segments-background: var(--color-neutral-50);
+  /*-------------------
+    Notifications
+  --------------------*/
+  --notification-item-background: hsl(var(--hsl-neutral-50) / 80%);
 
-  /*--- Table — header tint (base default uses non-Solarized --hsl-gray-200) ---*/
-  --table-header-background: hsl(var(--hsl-neutral-300) / 30%);
-
-  /*--- Tabular menu — active tab merges into the content surface
-        (base default light uses opaque white) ---*/
-  --tabular-menu-active-background: none hsl(var(--hsl-neutral-100));
-
-  /*--- Modal ---*/
-  --modal-box-header-background: var(--color-neutral-100);
-  --modal-box-content-background: var(--color-neutral-50);
-  --modal-box-actions-background: var(--color-neutral-100);
-
-  /*--- Preferences ---*/
+  /*-------------------
+    Preferences
+  --------------------*/
   --preferences-sidebar-background: var(--color-neutral-100);
   --preferences-view-background: var(--color-neutral-50);
 
-  /*--- Note statuses (app defaults use slate/amber/emerald/rose — not in
-        Solarized; remap to the nearest Solarized accent, same step) ---*/
+  /*-------------------
+    Note Status
+  --------------------*/
   --note-status-active: hsl(var(--hsl-blue-500));
   --note-status-onhold: hsl(var(--hsl-yellow-500));
   --note-status-completed: hsl(var(--hsl-cyan-500));
   --note-status-dropped: hsl(var(--hsl-red-600));
 }
 
-/*-------------------------------
+/*-------------------
   Acrylic background window
---------------------------------*/
+--------------------*/
 
 :root:has(body.acrylic-window) {
   --page-background: transparent;
