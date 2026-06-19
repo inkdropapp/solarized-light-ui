@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@inkdropapp/theme-dev-helpers':
-        specifier: ^0.3.11
-        version: 0.3.11
+        specifier: ^0.4.0
+        version: 0.4.0
 
 packages:
 
@@ -29,8 +29,9 @@ packages:
   '@inkdropapp/css@0.6.8':
     resolution: {integrity: sha512-vkwBhYeb3e87ydZEjoK4hCk2tzjJzM89Iz8U5e2sOadOnb7YkYQitm99iDLTufFNVaMZN3ZSSM5H4rz28NtFQg==}
 
-  '@inkdropapp/theme-dev-helpers@0.3.11':
-    resolution: {integrity: sha512-BhJKJRLIe73OsZoAy2eMlYfl1/QJ/pphWoM9zT4qdsW1MZAadMAjJ6h5FpIQp0ccljZYiuYOXkkhWCxIEkgAww==}
+  '@inkdropapp/theme-dev-helpers@0.4.0':
+    resolution: {integrity: sha512-vRkFlrDA5ZEE2geYFlsEXbW8YnB8liqqzXUXN+qDcEOP9lHbFGWX1yorOMtljbWsDXioniMBvGA3Jk53Nwb9OQ==}
+    engines: {node: '>=24'}
     hasBin: true
 
   '@napi-rs/wasm-runtime@1.1.5':
@@ -517,7 +518,7 @@ snapshots:
     optionalDependencies:
       inkdrop-model: 2.11.5
 
-  '@inkdropapp/theme-dev-helpers@0.3.11':
+  '@inkdropapp/theme-dev-helpers@0.4.0':
     dependencies:
       '@inkdropapp/base-ui-theme': 0.7.5
       '@inkdropapp/css': 0.6.8
