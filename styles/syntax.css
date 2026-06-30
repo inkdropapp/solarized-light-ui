@@ -1,0 +1,277 @@
+@layer theme.syntax {
+  /*
+   * Solarized Light syntax theme for Inkdrop v6 (CodeMirror 6 / Lezer).
+   */
+
+  :root {
+    /*── Editor chrome ────────────────────────────────────────────────────────*/
+    --editor-foreground-color: var(--color-neutral-500);
+    --editor-background-color: var(--color-neutral-50);
+    --editor-caret-color: var(--color-neutral-600);
+    /* --editor-selection-foreground: var(--color-neutral-800); */
+    --editor-selection-background: var(--color-neutral-300);
+    --editor-focused-selection-background: var(--color-neutral-300);
+    --editor-active-line-background-color: hsl(
+      var(--hsl-neutral-200) / 50%
+    );
+    --editor-special-char-color: var(--color-neutral-400);
+    --editor-spelling-error-color: var(--negative-color);
+
+    --editor-gutter-border-right: none;
+    --editor-gutter-color: var(--color-yellow-400);
+    --editor-gutter-background-color: transparent;
+    --editor-gutter-background-solid-color: var(--color-neutral-200);
+    --editor-active-line-gutter-background-color: hsl(
+      var(--hsl-neutral-200) / 50%
+    );
+
+    --editor-panel-background-color: var(--color-neutral-100);
+    --editor-panel-color: var(--color-neutral-500);
+    --editor-panel-border-color: var(--border-color);
+
+    --editor-tooltip-border-style: solid;
+    --editor-tooltip-border-width: 1px;
+    --editor-tooltip-border-color: var(--color-neutral-300);
+    --editor-tooltip-border-radius: 0.8em;
+    --editor-tooltip-background-color: var(--color-neutral-100);
+    --editor-tooltip-box-shadow: 0px 1px 2px 0 var(--color-neutral-50);
+    --editor-tooltip-autocomplete-padding: 0.2em;
+    --editor-tooltip-autocomplete-item-border-radius: 0.2em;
+    --editor-tooltip-autocomplete-item-padding: 0 0.8em;
+    --editor-tooltip-autocomplete-item-selected-background-color: var(
+      --color-neutral-300
+    );
+    --editor-tooltip-autocomplete-section-border-color: var(
+      --color-neutral-400
+    );
+    --editor-tooltip-autocomplete-item-selected-color: var(
+      --color-neutral-800
+    );
+    --editor-inline-tooltip-color: var(--color-neutral-500);
+    --editor-inline-tooltip-background-color: hsl(
+      var(--hsl-neutral-50)
+    );
+    --editor-inline-tooltip-outline: 1px solid var(--color-neutral-100);
+
+    --editor-completion-label: var(--color-neutral-600);
+    --editor-completion-matched-text-color: var(--color-neutral-700);
+    --editor-completion-matched-text-decoration: none;
+    --editor-completion-matched-text-font-style: normal;
+    --editor-completion-matched-text-font-weight: bold;
+    --editor-completion-detail-color: var(--color-neutral-400);
+    --editor-completion-detail-text-decoration: none;
+    --editor-completion-detail-font-style: normal;
+    --editor-completion-detail-font-weight: normal;
+
+    --editor-matching-bracket-outline: 1px solid
+      hsl(var(--hsl-red-500) / 90%);
+    --editor-matching-bracket-background-color: hsl(
+      var(--hsl-red-500) / 20%
+    );
+    --editor-nonmatching-bracket-outline: 1px solid
+      var(--color-neutral-400);
+    --editor-nonmatching-bracket-background-color: transparent;
+
+    --editor-selection-match-background-color: hsl(
+      var(--hsl-cyan-500) / 30%
+    );
+    --editor-selection-match-outline: none;
+    --editor-search-match-background-color: hsl(
+      var(--hsl-yellow-500) / 35%
+    );
+    --editor-search-match-outline: none;
+    --editor-search-match-selected-background-color: hsl(
+      var(--hsl-orange-500) / 45%
+    );
+    --editor-search-match-selected-outline: 1px solid
+      var(--color-orange-500);
+
+    --editor-placeholder-color: var(--color-neutral-400);
+    --editor-nes-ghost-color: var(--color-neutral-400);
+
+    --editor-highlight-space-color: var(--color-neutral-200);
+    --editor-highlight-tab-background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>');
+    --editor-highlight-tab-filter: "none";
+    --editor-highlight-tab-opacity: 0.3;
+    --editor-trailing-space-background-color: hsl(
+      var(--hsl-pink-500) / 40%
+    );
+
+    --editor-fold-placeholder-border-radius: 0.2em;
+    --editor-fold-placeholder-color: var(--color-neutral-50);
+    --editor-fold-placeholder-border: 1px solid var(--color-neutral-400);
+    --editor-fold-placeholder-background-color: var(
+      --color-neutral-400
+    );
+
+    --editor-image-widget-backdrop-background-color: hsl(
+      var(--hsl-neutral-300) / 40%
+    );
+    --editor-image-widget-backdrop-border: 1px solid
+      var(--color-neutral-300);
+
+    /*── Markdown elements ────────────────────────────────────────────────────*/
+    --md-inline-code-padding: 1px;
+    --md-inline-code-border-color: hsl(var(--hsl-neutral-500) / 15%);
+    --md-inline-code-border-width: 1px;
+    --md-inline-code-background-color: hsl(
+      var(--hsl-neutral-100) / 50%
+    );
+    --md-codeblock-color: var(--editor-foreground-color);
+    --md-codeblock-border-color: hsl(var(--hsl-neutral-500) / 15%);
+    --md-codeblock-border-width: 1px;
+    --md-codeblock-background-color: hsl(var(--hsl-neutral-100) / 50%);
+
+    --md-inline-mark-text-color: var(--color-red-950);
+    --md-inline-mark-background-color: hsl(var(--hsl-red-100));
+    --md-inline-mark-underline-color: hsl(var(--hsl-red-500));
+
+    --md-table-border-color: hsl(var(--hsl-neutral-500) / 15%);
+    --md-table-border-width: 1px;
+    --md-table-background-color: hsl(var(--hsl-neutral-100) / 50%);
+
+    --md-blockquote-border-color: var(--color-neutral-400);
+
+    --md-list-mark-color: var(--color-green-500);
+    --md-task-marker-font-weight: bold;
+
+    /*── Syntax tokens — the matching .tok-* rules live in @inkdropapp/css ─────*/
+    /* Comments — italic */
+    --syntax-comment-color: var(--color-neutral-400);
+    --syntax-comment-font-style: italic;
+    --syntax-line-comment-color: var(--syntax-comment-color);
+    --syntax-line-comment-font-style: var(--syntax-comment-font-style);
+    --syntax-block-comment-color: var(--syntax-comment-color);
+    --syntax-block-comment-font-style: var(--syntax-comment-font-style);
+    --syntax-doc-comment-color: var(--syntax-comment-color);
+    --syntax-doc-comment-font-style: var(--syntax-comment-font-style);
+
+    /* Names — property/std names cyan, definitions blue, constants magenta */
+    --syntax-name-color: var(--color-cyan-500);
+    --syntax-name-constant-color: var(--color-pink-500);
+    --syntax-name-standard-color: var(--syntax-name-color);
+    --syntax-name-definition-color: var(--color-blue-500);
+    --syntax-name-function-color: var(--syntax-name-color);
+    --syntax-name-special-color: var(--syntax-name-color);
+    --syntax-name-local-color: var(--syntax-name-color);
+
+    /* Variable names — base00, functions blue, specials magenta */
+    --syntax-variable-name-color: var(--color-neutral-500);
+    --syntax-variable-name-constant-color: var(--syntax-variable-name-color);
+    --syntax-variable-name-standard-color: var(--syntax-variable-name-color);
+    --syntax-variable-name-definition-color: var(--syntax-variable-name-color);
+    --syntax-variable-name-function-color: var(--color-blue-500);
+    --syntax-variable-name-special-color: var(--color-pink-500);
+    --syntax-variable-name-local-color: var(--syntax-variable-name-color);
+
+    /* Property names — cyan */
+    --syntax-property-name-color: var(--color-cyan-500);
+    --syntax-property-name-constant-color: var(--syntax-property-name-color);
+    --syntax-property-name-standard-color: var(--syntax-property-name-color);
+    --syntax-property-name-definition-color: var(--syntax-property-name-color);
+    --syntax-property-name-function-color: var(--syntax-property-name-color);
+    --syntax-property-name-special-color: var(--syntax-property-name-color);
+    --syntax-property-name-local-color: var(--syntax-property-name-color);
+
+    /* Other names */
+    --syntax-tag-name-color: var(--color-blue-500);
+    --syntax-attribute-name-color: var(--color-cyan-500);
+    --syntax-class-name-color: var(--color-orange-500);
+    --syntax-label-name-color: var(--color-pink-500);
+    --syntax-namespace-color: var(--color-pink-500);
+    --syntax-macro-name-color: var(--syntax-name-color);
+
+    /* Strings & regexps — yellow */
+    --syntax-string-color: var(--color-yellow-500);
+    --syntax-string-special-color: var(--syntax-string-color);
+    --syntax-string-constant-color: var(--syntax-string-color);
+    --syntax-string-standard-color: var(--syntax-string-color);
+
+    /* Numbers & literals */
+    --syntax-number-color: var(--color-pink-500);
+    --syntax-literal-color: var(--editor-foreground-color);
+    --syntax-character-color: var(--color-yellow-500);
+    --syntax-integer-color: var(--editor-foreground-color);
+    --syntax-float-color: var(--editor-foreground-color);
+    --syntax-bool-color: var(--color-pink-500);
+    --syntax-regexp-color: var(--syntax-string-color);
+    --syntax-color-color: var(--color-pink-500);
+    --syntax-url-color: var(--color-yellow-500);
+    --syntax-attribute-value-color: var(--editor-foreground-color);
+
+    /* Keywords — green */
+    --syntax-self-color: var(--color-pink-500);
+    --syntax-null-color: var(--editor-foreground-color);
+    --syntax-atom-color: var(--color-pink-500);
+    --syntax-unit-color: var(--editor-foreground-color);
+    --syntax-modifier-color: var(--color-pink-500);
+    --syntax-operator-keyword-color: var(--syntax-keyword-color);
+    --syntax-control-keyword-color: var(--syntax-keyword-color);
+    --syntax-definition-keyword-color: var(--syntax-keyword-color);
+    --syntax-module-keyword-color: var(--syntax-keyword-color);
+    --syntax-keyword-color: var(--color-green-500);
+
+    /* Operators — violet */
+    --syntax-operator-color: var(--color-violet-500);
+    --syntax-deref-operator-color: var(--syntax-operator-color);
+    --syntax-arithmetic-operator-color: var(--syntax-operator-color);
+    --syntax-logic-operator-color: var(--syntax-operator-color);
+    --syntax-bitwise-operator-color: var(--syntax-operator-color);
+    --syntax-compare-operator-color: var(--syntax-operator-color);
+    --syntax-update-operator-color: var(--syntax-operator-color);
+    --syntax-definition-operator-color: var(--syntax-operator-color);
+    --syntax-type-operator-color: var(--editor-foreground-color);
+    --syntax-control-operator-color: var(--syntax-operator-color);
+
+    /* Punctuation — brackets/separators cyan */
+    --syntax-separator-color: var(--color-cyan-500);
+    --syntax-angle-bracket-color: var(--color-cyan-500);
+    --syntax-square-bracket-color: var(--color-cyan-500);
+    --syntax-paren-color: var(--color-cyan-500);
+    --syntax-brace-color: var(--color-cyan-500);
+    --syntax-bracket-color: var(--editor-foreground-color);
+    --syntax-punctuation-color: var(--color-cyan-500);
+
+    /* Headings & prose */
+    --syntax-heading-color: var(--color-yellow-500);
+    --syntax-heading-font-weight: bold;
+    --syntax-heading-1-color: var(--syntax-heading-color);
+    --syntax-heading-1-font-weight: var(--syntax-heading-font-weight);
+    --syntax-heading-2-color: var(--syntax-heading-color);
+    --syntax-heading-2-font-weight: var(--syntax-heading-font-weight);
+    --syntax-heading-3-color: var(--syntax-heading-color);
+    --syntax-heading-3-font-weight: var(--syntax-heading-font-weight);
+    --syntax-heading-4-color: var(--syntax-heading-color);
+    --syntax-heading-4-font-weight: var(--syntax-heading-font-weight);
+    --syntax-heading-5-color: var(--syntax-heading-color);
+    --syntax-heading-5-font-weight: var(--syntax-heading-font-weight);
+    --syntax-heading-6-color: var(--syntax-heading-color);
+    --syntax-heading-6-font-weight: var(--syntax-heading-font-weight);
+    --syntax-content-separator-color: var(--color-neutral-400);
+    --syntax-list-color: var(--editor-foreground-color);
+    --syntax-quote-color: var(--color-neutral-600);
+    --syntax-quote-font-style: italic;
+    --syntax-emphasis-color: var(--color-green-500);
+    --syntax-emphasis-font-style: italic;
+    --syntax-strong-color: var(--color-neutral-700);
+    --syntax-strong-font-weight: bold;
+    --syntax-link-color: var(--color-cyan-500);
+    --syntax-link-text-decoration: underline;
+    --syntax-strikethrough-text-decoration: line-through;
+    --syntax-monospace-color: var(--color-neutral-600);
+    --syntax-content-color: var(--editor-foreground-color);
+
+    /* Diffs & meta */
+    --syntax-inserted-color: var(--color-green-500);
+    --syntax-deleted-color: var(--color-red-500);
+    --syntax-changed-color: var(--color-yellow-500);
+    --syntax-document-meta-color: var(--editor-foreground-color);
+    --syntax-annotation-color: var(--color-orange-500);
+    --syntax-processing-instruction-color: var(--color-green-500);
+    --syntax-meta-color: var(--color-red-500);
+
+    /* Diagnostics — dotted red underline */
+    --syntax-invalid-color: var(--color-neutral-300);
+    --syntax-invalid-border-bottom: 1px dotted var(--color-red-500);
+  }
+}
